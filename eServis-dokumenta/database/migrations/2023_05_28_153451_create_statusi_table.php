@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMupsTable extends Migration
+class CreateStatusiTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateMupsTable extends Migration
      */
     public function up()
     {
-        Schema::create('mups', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('statusi', function (Blueprint $table) {
+            $table->id('statusId');
+            $table->string('naziv');
         });
     }
 
@@ -26,6 +26,6 @@ class CreateMupsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mups');
+        Schema::dropIfExists('statusi');
     }
 }
